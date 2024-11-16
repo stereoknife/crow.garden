@@ -1,0 +1,61 @@
+body {
+	font-family: ui-serif;
+	/* background: rgb(189, 228, 159); */
+}
+
+body>div {
+	width: 480px;
+	margin: auto;
+}
+
+a {
+	color: #444;
+	text-decoration-style: dotted;
+}
+
+a:hover {
+	text-decoration-style: solid;
+}
+
+h1 {
+	font-style: italic;
+}
+
+nav {
+	font-family: ui-monospace;
+}
+
+nav ul {
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+}
+
+nav a {
+	color: black;
+	text-transform: uppercase;
+	padding: 0.2rem 0.5rem;
+	transition: 0.4s;
+	text-decoration-style: solid;
+}
+
+nav a:hover {
+	color: white;
+	background: black;
+	transition: 0.4s;
+}
+
+li {
+	margin: 0.6rem 0;
+}
+
+footer {
+	font-size: 0.7em;
+}
+
+.name {
+	display: inline-block;
+	height: 3em;
+}
