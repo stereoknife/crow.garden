@@ -1,4 +1,5 @@
 .nova
 .DS_Store
 .idea
-skeleton.html
+node_modules/
+_site/
