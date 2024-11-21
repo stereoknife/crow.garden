@@ -5,6 +5,7 @@ export default function(eleventyConfig) {
 		components: "_components/**/*.webc",
 	});
 	eleventyConfig.addPassthroughCopy("public");
+	eleventyConfig.setInputDirectory("src"); 
 };
 
 export const config = {
