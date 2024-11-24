@@ -1,7 +1,7 @@
 <nav>
 	<ul>
 		<li><a href="/">Home</a></li>
-		<li><strike><a href="#">Zine</a></strike></li>
+		<li><a href="https://leaflet.pub/b2b9b984-b508-414d-933f-ddd6fa0a8e9f">Zine</a></li>
 		<li><a href="/shed">Shed</a></li>
 		<li><a href="/now">Now</a></li>
 	</ul>

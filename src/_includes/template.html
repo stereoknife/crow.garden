@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>crow.garden</title>
+		<!-- Default bucket -->
+		<link rel="stylesheet" href="/public/normalize.css" webc:keep>
+		<link rel="stylesheet" href="/public/styles.css" webc:keep>
+		<style @raw="getBundle('css')" webc:keep></style>
+		<script @raw="getBundle('js')" webc:keep></script>
+		<link rel="icon" href="/public/favicon.png"/>
+	</head>
+	<body>
+		<div>
+			<navigation></navigation>
+			<template @raw="content" webc:nokeep></template>
+		</div>
+
+		<!-- `defer` bucket -->
+		<style @raw="getBundle('css', 'defer')" webc:keep></style>
+		<script @raw="getBundle('js', 'defer')" webc:keep></script>
+	</body>
+</html>
