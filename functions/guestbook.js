@@ -1,7 +1,7 @@
 export async function onRequestGet(context) {
 	const query = context.env.CROW_DB.prepare('SELECT * FROM guestbook')
 	const data = await query.run()
-	return new Response(data.results)
+	return new Response(JSON.stringify(data.results))
 }
 
 export async function onRequestPost(context){
