@@ -4,7 +4,7 @@
 		<li><a href="https://leaflet.pub/b2b9b984-b508-414d-933f-ddd6fa0a8e9f">Zine</a></li>
 		<li><a href="/shed">Shed</a></li>
 		<li><a href="/now">Now</a></li>
-		<!--<li class="push"><button id="theme-btn">light</button></li>-->
+		<li class="push"><button id="theme-btn">light</button></li>
 	</ul>
 </nav>
 
