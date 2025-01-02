@@ -1,0 +1,10 @@
+<footer>
+	<img src="/public/tadi.png" alt="tadi web" height="30">
+</footer>
+
+<style>
+	footer {
+		font-size: 0.7em;
+		margin-top: 3rem;
+	}
+</style>

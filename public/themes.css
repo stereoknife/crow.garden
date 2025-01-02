@@ -1,0 +1,27 @@
+body {
+	--text-colour: black;
+	--link-colour: #444;
+	--bg-colour: white;
+}
+
+body.dark-theme {
+	--text-colour: white;
+	--link-colour: #DDD;
+	--bg-colour: #111;
+}
+
+@media (prefers-color-scheme: dark) {
+  
+  /* Dark theme styles go here */
+  body {
+	  --text-colour: white;
+	  --link-colour: #DDD;
+	  --bg-colour: #111;
+  }
+  
+  body.light-theme {
+    --text-colour: black;
+    --link-colour: #444;
+    --bg-colour: white;
+  }
+}
