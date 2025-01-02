@@ -1,5 +1,5 @@
 <footer>
-	<img src="/public/tadi.png" alt="tadi web" height="30">
+	<a href="https://tadiweb.com"><img src="/public/tadi.png" alt="tadi web" height="30"></a>
 </footer>
 
 <style>
