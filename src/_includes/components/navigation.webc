@@ -43,8 +43,24 @@
 </style>
 
 <script webc:bucket="defer">
-	const theme_btn = document.getElementById('theme-btn')
 	const prefers_dark = window.matchMedia('(prefers-color-scheme: dark)')
+	let dark_theme = localStorage.getItem('dark-theme')
+	
+	if (dark_theme == null) {
+		dark_theme = prefers_dark.matches
+	} else {
+		dark_theme = dark_theme === 'true'
+	}
+	
+	if (prefers_dark.matches && !dark_theme) {
+		document.body.classList.toggle('light-theme')
+	}
+	else if (!prefers_dark.matches && dark_theme)
+	{
+		document.body.classList.toggle('dark-theme')
+	}
+	
+	const theme_btn = document.getElementById('theme-btn')
 	
 	theme_btn.addEventListener('click', () => {
 		if (prefers_dark.matches) {
@@ -54,5 +70,7 @@
 		{
 			document.body.classList.toggle('dark-theme')
 		}
+		dark_theme = !dark_theme
+		localStorage.setItem('dark-theme', dark_theme)
 	})
 </script>
