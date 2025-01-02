@@ -4,7 +4,7 @@
 		<li><a href="https://leaflet.pub/b2b9b984-b508-414d-933f-ddd6fa0a8e9f">Zine</a></li>
 		<li><a href="/shed">Shed</a></li>
 		<li><a href="/now">Now</a></li>
-		<li class="push"><button id="theme-btn">light</button></li>
+		<li class="push"><button id="theme-btn">●</button></li>
 	</ul>
 </nav>
 
@@ -40,6 +40,16 @@
 	nav li.push {
 		margin-left: auto;
 	}
+	
+	nav button {
+		border: none;
+		background: transparent;
+		color: var(--text-colour);
+	}
+	
+	nav button:hover {
+		cursor: pointer;
+	}
 </style>
 
 <script webc:bucket="defer">
@@ -62,6 +72,8 @@
 	
 	const theme_btn = document.getElementById('theme-btn')
 	
+	//theme_btn.innerText = dark_theme ? '☀️' : '🌙'
+	
 	theme_btn.addEventListener('click', () => {
 		if (prefers_dark.matches) {
 			document.body.classList.toggle('light-theme')
@@ -72,5 +84,6 @@
 		}
 		dark_theme = !dark_theme
 		localStorage.setItem('dark-theme', dark_theme)
+		//theme_btn.innerText = dark_theme ? '☀️' : '🌙'
 	})
 </script>
