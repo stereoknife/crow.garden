@@ -1,0 +1,58 @@
+<nav>
+	<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="https://leaflet.pub/b2b9b984-b508-414d-933f-ddd6fa0a8e9f">Zine</a></li>
+		<li><a href="/shed">Shed</a></li>
+		<li><a href="/now">Now</a></li>
+		<!--<li class="push"><button id="theme-btn">light</button></li>-->
+	</ul>
+</nav>
+
+<style>
+	nav {
+		font-family: ui-monospace;
+	}
+	
+	nav ul {
+		padding: 0;
+		display: flex;
+		flex-direction: row;
+	}
+	
+	nav li {
+		display: inline-block;
+	}
+	
+	nav a {
+		color: var(--text-colour);
+		text-transform: uppercase;
+		padding: 0.2rem 0.5rem;
+		transition: 0.4s;
+		text-decoration-style: solid;
+	}
+	
+	nav a:hover {
+		color: var(--bg-colour);
+		background: var(--text-colour);
+		transition: 0.4s;
+	}
+	
+	nav li.push {
+		margin-left: auto;
+	}
+</style>
+
+<script webc:bucket="defer">
+	const theme_btn = document.getElementById('theme-btn')
+	const prefers_dark = window.matchMedia('(prefers-color-scheme: dark)')
+	
+	theme_btn.addEventListener('click', () => {
+		if (prefers_dark.matches) {
+			document.body.classList.toggle('light-theme')
+		}
+		else
+		{
+			document.body.classList.toggle('dark-theme')
+		}
+	})
+</script>
