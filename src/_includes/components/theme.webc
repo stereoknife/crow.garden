@@ -1,0 +1,50 @@
+<!--<input type="range" min="0" max="999">-->
+<button id="theme-btn">●</button>
+
+<style webc:scoped>
+	button {
+		border: none;
+		background: transparent;
+		color: var(--text-colour);
+	}
+	
+	button:hover {
+		cursor: pointer;
+	}
+</style>
+
+<script webc:bucket="defer">
+	const prefers_dark = window.matchMedia('(prefers-color-scheme: dark)')
+	let dark_theme = localStorage.getItem('dark-theme')
+	
+	if (dark_theme == null) {
+		dark_theme = prefers_dark.matches
+	} else {
+		dark_theme = dark_theme === 'true'
+	}
+	
+	if (prefers_dark.matches && !dark_theme) {
+		document.body.classList.toggle('light-theme')
+	}
+	else if (!prefers_dark.matches && dark_theme)
+	{
+		document.body.classList.toggle('dark-theme')
+	}
+	
+	const theme_btn = document.getElementById('theme-btn')
+	
+	//theme_btn.innerText = dark_theme ? '☀️' : '🌙'
+	
+	theme_btn.addEventListener('click', () => {
+		if (prefers_dark.matches) {
+			document.body.classList.toggle('light-theme')
+		}
+		else
+		{
+			document.body.classList.toggle('dark-theme')
+		}
+		dark_theme = !dark_theme
+		localStorage.setItem('dark-theme', dark_theme)
+		//theme_btn.innerText = dark_theme ? '☀️' : '🌙'
+	})
+</script>

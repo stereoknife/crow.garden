@@ -4,7 +4,7 @@
 		<li><a href="https://leaflet.pub/b2b9b984-b508-414d-933f-ddd6fa0a8e9f">Zine</a></li>
 		<li><a href="/shed">Shed</a></li>
 		<li><a href="/now">Now</a></li>
-		<li class="push"><button id="theme-btn">●</button></li>
+		<li class="push"><theme></li>
 	</ul>
 </nav>
 
@@ -40,50 +40,4 @@
 	nav li.push {
 		margin-left: auto;
 	}
-	
-	nav button {
-		border: none;
-		background: transparent;
-		color: var(--text-colour);
-	}
-	
-	nav button:hover {
-		cursor: pointer;
-	}
 </style>
-
-<script webc:bucket="defer">
-	const prefers_dark = window.matchMedia('(prefers-color-scheme: dark)')
-	let dark_theme = localStorage.getItem('dark-theme')
-	
-	if (dark_theme == null) {
-		dark_theme = prefers_dark.matches
-	} else {
-		dark_theme = dark_theme === 'true'
-	}
-	
-	if (prefers_dark.matches && !dark_theme) {
-		document.body.classList.toggle('light-theme')
-	}
-	else if (!prefers_dark.matches && dark_theme)
-	{
-		document.body.classList.toggle('dark-theme')
-	}
-	
-	const theme_btn = document.getElementById('theme-btn')
-	
-	//theme_btn.innerText = dark_theme ? '☀️' : '🌙'
-	
-	theme_btn.addEventListener('click', () => {
-		if (prefers_dark.matches) {
-			document.body.classList.toggle('light-theme')
-		}
-		else
-		{
-			document.body.classList.toggle('dark-theme')
-		}
-		dark_theme = !dark_theme
-		localStorage.setItem('dark-theme', dark_theme)
-		//theme_btn.innerText = dark_theme ? '☀️' : '🌙'
-	})
-</script>
