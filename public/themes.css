@@ -1,10 +1,10 @@
-body {
+:root {
 	--text-colour: black;
 	--link-colour: #444;
 	--bg-colour: white;
 }
 
-body.dark-theme {
+:root.dark-theme {
 	--text-colour: white;
 	--link-colour: #DDD;
 	--bg-colour: #111;
@@ -13,13 +13,13 @@ body.dark-theme {
 @media (prefers-color-scheme: dark) {
   
   /* Dark theme styles go here */
-  body {
+  :root {
 	  --text-colour: white;
 	  --link-colour: #DDD;
 	  --bg-colour: #111;
   }
   
-  body.light-theme {
+  :root.light-theme {
     --text-colour: black;
     --link-colour: #444;
     --bg-colour: white;
