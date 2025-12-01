@@ -7,12 +7,6 @@ body {
 	min-height: 100%;
 }
 
-body>div {
-	width: 480px;
-	margin: auto;
-	min-height: 100%;
-}
-
 a {
 	color: var(--link-colour);
 	text-decoration-style: dotted;
