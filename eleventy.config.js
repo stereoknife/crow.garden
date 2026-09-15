@@ -1,14 +1,10 @@
-import pluginWebc from "@11ty/eleventy-plugin-webc";
-
-export default function(eleventyConfig) {
-	eleventyConfig.addPlugin(pluginWebc, {
-		components: "src/_components/**/*.webc",
-	});
+export default function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("public");
 	eleventyConfig.setInputDirectory("src");
-	eleventyConfig.addGlobalData("layout", "template.html");
-};
-
-export const config = {
-  htmlTemplateEngine: "webc",
+  eleventyConfig.addGlobalData("layout", "template.html");
+  eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
+		if(data.draft) {
+			return false;
+		}
+	});
 };
