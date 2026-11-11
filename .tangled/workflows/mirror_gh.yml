@@ -12,4 +12,4 @@ steps:
   - name: "Add remote"
     command: "git remote add gh \"https://${GH_USER}:${GH_TOKEN}@github.com/${GH_USER}/${TANGLED_REPO_NAME}\""
   - name: "Push"
-    command: "git push gh --mirror"
+    command: "git push gh --force --mirror --prune"
