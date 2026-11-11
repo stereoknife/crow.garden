@@ -2,7 +2,7 @@
 Hi! My name is Ignasi or Myrsky. I'm a computer graphics and also simulation programmer, here you can find some of the things I've made over the years. Besides computer stuff I also like board games, analog photography and snowboarding. Check out the [now](/now) page to see what I'm up to these days.
 
 ## What I've made:
-- [Snail](https://tangled.org/crow.garden/snail): A small graphics library and demo app
+- [Snail](https://tangled.org/crow.garden/snail): A small OpenGL graphics library and demo app
 - [Untitled Snow Simulation Tool](https://github.com/stereoknife/snow-sim): Snow cover simulation project and Unity package, main topic of my master thesis
 
 ## University assignments
