@@ -1,0 +1,10 @@
+when:
+    - event: [push]
+engine: dummy
+environment:
+    GH_USER: "stereoknife"
+steps:
+    - name: "Add remote"
+      command: "git remote add gh \"https://${GH_USER}:${GH_TOKEN}@github.com/${GH_USER}/${TANGLED_REPO_NAME}\""
+    - name: "Push"
+      command: "git push gh --mirror"
