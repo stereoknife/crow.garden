@@ -15,7 +15,7 @@ steps:
   - name: "Clone repo"
     command: "git clone --bare \"${TANGLED_REPO_URL}\" ${TANGLED_REPO_NAME} && cd ${TANGLED_REPO_NAME}"
   - name: "Config"
-    command: "git config --global --add safe.directory ${PWD}"
+    command: "echo ${PWD}"
   - name: "Add remote"
     command: "git remote add gh \"https://${GH_USER}:${GH_TOKEN}@github.com/${GH_USER}/${TANGLED_REPO_NAME}\""
   - name: "Push"
