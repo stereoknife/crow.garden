@@ -12,10 +12,8 @@ clone:
     skip: true
 
 steps:
-  - name: "Setup"
-    command: "mkdir repo && cd repo"
   - name: "Clone repo"
-    command: "git clone --bare \"${TANGLED_REPO_URL}\" ."
+    command: "git clone --bare \"${TANGLED_REPO_URL}\" ${TANGLED_REPO_NAME} && cd ${TANGLED_REPO_NAME}"
   - name: "Add remote"
     command: "git remote add gh \"https://${GH_USER}:${GH_TOKEN}@github.com/${GH_USER}/${TANGLED_REPO_NAME}\""
   - name: "Push"
