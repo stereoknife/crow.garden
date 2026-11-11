@@ -8,7 +8,12 @@ image: alpine
 environment:
   GH_USER: "stereoknife"
 
+clone:
+    skip: true
+
 steps:
+  - name: "Clone repo"
+    command: "git clone --bare \"${TANGLED_REPO_URL}\""
   - name: "Add remote"
     command: "git remote add gh \"https://${GH_USER}:${GH_TOKEN}@github.com/${GH_USER}/${TANGLED_REPO_NAME}\""
   - name: "Push"
